@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--<script src="Myscript.js"></script>-->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Employee.js"></script>
+    <link href="Employee.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h2>Employee Master</h2>
+
+    <button class="accordion"><b>Personal Information</b></button>
+    <div class="panel">
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table" id="table1">
+                    <tbody>
+                    <tr>
+                        <td>ID </td>
+                        <td><div><input class="form-group" type="text" id="txtID" /></div></td>
+                        <td>Name </td>
+                        <td><div><input class="form-group" type="text" id="txtname" /></div></td>
+                        <td>Date Of Birth</td>
+                        <td><div><input class="form-group" type="date" id="txtdate" /></div></td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <div>
+                                <select>
+
+                                    <option value="12" selected>Active</option>
+                                    <option value="13">InActive</option>
+
+                                </select>
+                            </div>
+                        </td>
+                        <td>Salary</td>
+                        <td><div><input class="form-group" type="text" id="txtsal" /></div></td>
+                        <td>Joining Date</td>
+                        <td><div><input class="form-group" type="date" id="txtjoin" /></div></td>
+                    </tr>
+                    <tr>
+                        <td>Contract End Date</td>
+                        <td><div><input class="form-group" type="date" id="txtcend" /></div></td>
+                        <td>Retirement Date</td>
+                        <td><div><input class="form-group" type="date" id="txtret" /></div></td>
+                        <td>Job Profile</td>
+                        <td>
+                            <div>
+                                <select>
+
+                                    <option value="19" selected>Full Time</option>
+                                    <option value="20">Part Time</option>
+                                    <option value="21">Contract</option>
+                                    <option value="22">Permanent</option>
+                                    <option value="23">Trainee</option>
+                                    <option value="24">Probation Period</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Salary Mode</td>
+                        <td>
+                            <div>
+                                <select>
+
+                                    <option value="15" selected>Bank</option>
+                                    <option value="17">Cheque</option>
+                                    <option value="18">Cash</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>Company Email</td>
+                        <td><div><input class="form-group" type="email" id="txtemil" /></div></td>
+                        <td>Notice Days</td>
+                        <td><div><input class="form-group" type="text" id="txtnotice" /></div></td>
+                    </tr>
+
+                    <tr>
+                        <td>Department</td>
+                        <td>
+                            <div>
+                                <select>
+
+                                    <option value="30" selected>Bank</option>
+                                    <option value="31">Cheque</option>
+                                    <option value="32">Cash</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>Designation</td>
+                        <td>
+                            <div>
+                                <select>
+
+                                    <option value="33" selected>Bank</option>
+                                    <option value="34">Cheque</option>
+                                    <option value="35">Cash</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button class="accordion"><b>Contact Details</b></button>
+    <div class="panel">
+        <div class="table-responsive">
+            <table class="table" id="table6">
+                <tr>
+                    <th>ID</th>
+                    <th>Phone No</th>
+                    <th>Address</th>
+                    <th>Taluka</th>
+                    <th>Dist</th>
+                    <th>PinCode</th>
+                    <th>State</th>
+                    <th class="alert alert-info"><a href="javascript:void(0);" style="font-size:18px;" id="addContact" title="Add Contact"><span class="glyphicon glyphicon-plus"></span></a></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="id" class="form-control"></td>
+                    <td><input type="text" name="Phone No" class="form-control"></td>
+                    <td><textarea class="form-control" id="address" name="textarea" rows="3"></textarea></td>
+                    <td><input type="text" name="Taluka" class="form-control"></td>
+                    <td><input type="text" name="Dist" class="form-control"></td>
+                    <td><input type="text" name="PinCode" class="form-control"></td>
+                    <td><input type="text" name="State" class="form-control"></td>
+                    <td><a href='javascript:void(0);' class='remove3' title="Remove Contact"><span class='glyphicon glyphicon-remove'></span></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+   
+    <button class="accordion"><b>Account Details</b></button>
+    <div class="panel">
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table" id="table3">
+                    <tbody>
+                        <tr>
+                            <td>Opning Balance</td>
+                            <td><div><input class="form-group" type="text" id="txtOB" /></div></td>
+                            <td>Debit/Credit</td>
+                            <td>
+                                <div>
+                                    <select>
+
+                                        <option value="15" selected>Debit</option>
+                                        <option value="16">Credit</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                            <td>PAN No</td>
+                            <td><div><input class="form-group" type="text" id="txtpan" /></div></td>
+                        </tr>
+                        <tr>
+                            <td>UAN No</td>
+                            <td><div><input class="form-group" type="text" id="txtuan" /></div></td>
+                            <td>EPF No</td>
+                            <td><div><input class="form-group" type="text" id="txtepf" /></div></td>
+                            <td>ESI No</td>
+                            <td><div><input class="form-group" type="text" id="txtpan" /></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+ 
+    <button class="accordion"><b>Other Details</b></button>
+    <div class="panel">
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table" id="table4">
+                    <tbody>
+                        <tr>
+                            <td>Blood Group</td>
+                            <td><div><input class="form-group" type="text" id="txtbg" /></div></td>
+
+                            <td>Aadhar Card No</td>
+                            <td><div><input class="form-group" type="text" id="txtuaid" /></div></td>
+
+
+                            <td>Education</td>
+                            <td><div><input class="form-group" type="text" id="txtedu" /></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button class="accordion"><b>Employee Manager</b></button>
+    <div class="panel">
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <p>Collapse Content</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <button id="save" name="save" class="btn btn-primary btn-lg glyphicon glyphicon-save">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="print" name="print" class="btn btn-primary btn-lg glyphicon glyphicon-print">Print</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="refresh" name="refresh" class="btn btn-primary btn-lg glyphicon glyphicon-refresh disable" onClick="history.go(0)">Refresh</button>
+        </div>
+    </div>
+
+    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+    </script>
+
+</body>
+
+</html>

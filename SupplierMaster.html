@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--<script src="Myscript.js"></script>-->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Employee.js"></script>
+    <link href="Employee.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h2>Supplier Master</h2>
+
+    <button class="accordion" ><b>Basic Details</b></button>
+    <div class="panel">
+        
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table" id="table1">
+                    <tbody>
+                        <tr>
+                            <td>Supplier ID </td>
+                            <td><div><input class="form-group" type="text" id="txtID" /></div></td>
+                            <td> Supplier Name </td>
+                            <td><div><input class="form-group" type="text" id="txtname" /></div></td>
+                            <td>Date</td>
+                            <td><div><input class="form-group" type="date" id="txtdate" /></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Status</td>
+                            <td>
+                                <div>
+                                    <select>
+                                        <option value="12" selected>Active</option>
+                                        <option value="13">InActive</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>State</td>
+                            <td>
+                                <div>
+                                    <select>
+                                        <option value="12" selected>goa</option>
+                                        <option value="13">maharastra</option>
+                                    </select>
+                                </div>
+                            </td>
+
+                            <td>Group</td>
+                            <td>
+                                <div>
+                                    <select>
+                                        <option value="12" selected>group1</option>
+                                        <option value="13">group2</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button class="accordion"><b>Account Details</b></button>
+    <div class="panel">
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table" id="table2">
+                    <tbody>
+                        <tr>
+                            <td>GST NO</td>
+                            <td><div><input class="form-group" type="text" id="txtGST" /></div></td>
+                            <td> Adhar Card No </td>
+                            <td><div><input class="form-group" type="text" id="txtadhar" /></div></td>
+                            <td>PanCard No</td>
+                            <td><div><input class="form-group" type="date" id="txtpan" /></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Opening Balance</td>
+                            <td>
+                               <div><input class="form-group" type="text" id="txtbalance" /></div>
+                            </td>
+                            <td>Balance Type</td>
+                            <td>
+                                <div>
+                                    <select>
+                                        <option value="Credit" selected>Credit</option>
+                                        <option value="Debit">Debit</option>
+                                    </select>
+                                </div>
+                            </td>
+
+                            <td>Service Tax No</td>
+                            <td>
+                                <div><input class="form-group" type="text" id="txtservice" /></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Security Cheque</td>
+                            <td>
+                                <div>
+                                    <select>
+                                        <option value="Yes" selected>Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </td>
+
+                            <td>Check No</td>
+                            <td>
+                                <div><input class="form-group" type="text" id="txtcheck" /></div>
+                            </td>
+                            <td>Check Amount</td>
+                            <td>
+                                <div><input class="form-group" type="number" id="amount" /></div>
+                            </td>
+                            </tr>
+
+                   </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button class="accordion"><b>Address Details</b></button>
+    <div class="panel">     
+        <div class="table-responsive">
+            <table class="table" id="table3">
+                <tr>
+                    <th>Address</th>
+                    <th>Area</th>
+                    <th>Taluka</th>
+                    <th>District</th>
+                    <th>Pincode</th>
+                    <th>State</th>
+                    <th class="alert alert-info"><a href="javascript:void(0);" style="font-size:18px;" id="addMore" title="Add Address"><span class="glyphicon glyphicon-plus"></span></a></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="Address" class="form-control"></td>
+                    <td><textarea type="text" name="Area" class="form-control"></textarea></td>
+                    <td><input type="text" name="Taluka" class="form-control"></td>
+                    <td><input type="text" name="District" class="form-control"></td>
+                    <td><input type="text" name="Pincode" class="form-control"></td>
+                    <td><input type="text" name="State" class="form-control"></td>
+                    <td><a href='javascript:void(0);' class='remove' title="Remove Address"><span class='glyphicon glyphicon-remove'></span></a></td>
+                </tr>
+             </table>
+        </div> 
+    </div>
+
+    <button class="accordion"><b>Contact Details</b></button>
+    <div class="panel">
+        <div class="table-responsive">
+            <table class="table" id="table4">
+                <tr>
+                    <th>Contact Person</th>
+                    <th>Mobile No</th>
+                    <th>Email Id</th>
+                    <th>Department</th>
+                    <th class="alert alert-info"><a href="javascript:void(0);" style="font-size:18px;" id="add" title="Add Contact"><span class="glyphicon glyphicon-plus"></span></a></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="Contact Person" class="form-control"></td>
+                    <td><input type="text" name="Mobile No" class="form-control"></td>
+                    <td><input type="text" name="Email Id" class="form-control"></td>
+                    <td><input type="text" name="Department" class="form-control"></td>       
+                    <td><a href='javascript:void(0);' class='remove1' title="Remove Contact"><span class='glyphicon glyphicon-remove'></span></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <button class="accordion"><b>Bank Details</b></button>
+    <div class="panel">
+        <div class="table-responsive">
+            <table class="table" id="table5">
+                <tr>
+                    <th>Account Number</th>
+                    <th>Bank Name</th>
+                    <th>Branch</th>
+                    <th>IFSC Code</th>
+                    <th class="alert alert-info"><a href="javascript:void(0);" style="font-size:18px;" id="addBank" title="Add Record"><span class="glyphicon glyphicon-plus"></span></a></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="Account Number" class="form-control"></td>
+                    <td><input type="text" name="Bank Name" class="form-control"></td>
+                    <td><input type="text" name="Branch" class="form-control"></td>
+                    <td><input type="text" name="IFSC Code" class="form-control"></td>
+                    <td><a href='javascript:void(0);' class='remove2' title="Remove Record"><span class='glyphicon glyphicon-remove'></span></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <button id="save" name="save" class="btn btn-primary btn-lg glyphicon glyphicon-save">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="print" name="print" class="btn btn-primary btn-lg glyphicon glyphicon-print">Print</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="refresh" name="refresh" class="btn btn-primary btn-lg glyphicon glyphicon-refresh disable" onClick="history.go(0)">Refresh</button>
+        </div>
+    </div>
+        
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+    </script>
+
+</body>
+
+</html>
